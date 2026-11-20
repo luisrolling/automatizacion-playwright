@@ -39,7 +39,8 @@ export default defineConfig({
       name: 'chromium',
       use: { 
         ...devices['Desktop Chrome'], 
-        launchOptions: { slowMo: 0 },
+         trace: 'on-first-retry',
+        //launchOptions: { slowMo: 0 },
       },
     },
 
