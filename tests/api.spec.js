@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test('GET de un post devuelve 200 y los campos esperados', async ({ request }) => {
     const response = await request.get('https://jsonplaceholder.typicode.com/posts/1');
-    expect(response.status()).toBe(404);
+    expect(response.status()).toBe(200);
 
     const body = await response.json();
     expect(body.id).toBe(1);
